@@ -106,7 +106,7 @@ export const OscillatorLoop = () => {
       if (dbMax.data < -25) {
         if (startTime.current && !endTime.current) {
           endTime.current = new Date();
-          
+
           console.log(startTime.current);
           console.log(endTime.current);
 
@@ -129,7 +129,7 @@ export const OscillatorLoop = () => {
 
   return (
     <Stack spacing={4}>
-      <Button onClick={handleOnClick} w={20}>
+      <Button onClick={handleOnClick} w={20} bg={'blue.100'}>
         Play
       </Button>
       <Box>
