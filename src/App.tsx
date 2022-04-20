@@ -4,8 +4,9 @@ import {
   Stack,
   theme,
 } from "@chakra-ui/react"
+import { Mic } from "./learning/Mic";
 // import { Oscillator } from "./learning/Oscillator"
-import { OscillatorLoop } from "./learning/OscillatorLoop"
+// import { OscillatorLoop } from "./learning/OscillatorLoop"
 
 export const App = () => (
   <ChakraProvider theme={theme}>
@@ -20,7 +21,8 @@ export const App = () => (
         p={6}
       >
         {/* <Oscillator /> */}
-        <OscillatorLoop />
+        {/* <OscillatorLoop /> */}
+        <Mic />
       </Stack>
     </Box>
   </ChakraProvider>
