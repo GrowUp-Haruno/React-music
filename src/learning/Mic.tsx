@@ -82,7 +82,7 @@ export const Mic = () => {
           tackTime.current.getTime() - startTime.current.getTime() >
           sumMaxdb.current.length * samplingRate
         ) {
-          sumMaxdb.current.push(Math.abs(dbMax.data));
+          sumMaxdb.current.push(dbMax.data);
         }
       }
 
@@ -139,9 +139,9 @@ export const Mic = () => {
         <Text>{`音量：${maxFreq.data.toFixed(2)}[db]`}</Text>
         <Divider />
         <Text>{`最高記録：${(measureResult.time / 1000).toFixed(2)}[s]`}</Text>
-        <Text>{`最高記録時の平均音量：-${measureResult.aveVolume.toFixed(2)}[dB]`}</Text>
-        <Text>{`音量の標準偏差：${measureResult.sdVolume.toFixed(2)}`}</Text>
-        <Text color='gray'>{`音量の標準偏差は0に近いほどバラツキが少ない`}</Text>
+        <Text>{`最高記録時の平均音量：${measureResult.aveVolume.toFixed(2)}[dB]`}</Text>
+        <Text>{`音量の標準偏差：${measureResult.sdVolume.toFixed(6)}`}</Text>
+        <Text color="gray">{`音量の標準偏差は0に近いほどバラツキが少ない`}</Text>
       </Stack>
 
       {!playing ? (
